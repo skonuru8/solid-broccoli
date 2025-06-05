@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #eef;
+}
+
+.app {
+  padding: 20px;
+}
+
+canvas {
+  border: 1px solid #444;
+  background: #cceaff;
+}
+
+.instructions {
+  margin-top: 10px;
+  color: #555;
+}
