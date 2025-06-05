@@ -3,10 +3,10 @@ import { useRef, useEffect, useState } from 'react'
 const WIDTH = 400
 const HEIGHT = 600
 const BIRD_SIZE = 20
-const GRAVITY = 0.6
-const JUMP = -10
+const GRAVITY = 0.4
+const JUMP = -8
 const PIPE_WIDTH = 50
-const PIPE_GAP = 150
+const PIPE_GAP = 180
 
 function FlappyBird() {
   const canvasRef = useRef(null)
