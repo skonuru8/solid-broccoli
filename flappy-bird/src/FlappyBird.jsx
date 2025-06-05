@@ -117,12 +117,19 @@ function FlappyBird() {
       velocity = JUMP
     }
 
-    window.addEventListener('keydown', handleJump)
+    function handleKey(e) {
+      if (['Space', 'ArrowUp', 'Enter'].includes(e.code)) {
+        e.preventDefault()
+        handleJump()
+      }
+    }
+
+    window.addEventListener('keydown', handleKey)
     canvas.addEventListener('click', handleJump)
 
     return () => {
       cancelAnimationFrame(animationFrameId)
-      window.removeEventListener('keydown', handleJump)
+      window.removeEventListener('keydown', handleKey)
       canvas.removeEventListener('click', handleJump)
     }
   }, [running])
