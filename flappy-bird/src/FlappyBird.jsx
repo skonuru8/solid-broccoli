@@ -50,7 +50,15 @@ function FlappyBird() {
 
       // draw bird
       ctx.fillStyle = 'yellow'
-      ctx.fillRect(80, birdY, BIRD_SIZE, BIRD_SIZE)
+      ctx.beginPath()
+      ctx.arc(
+        80 + BIRD_SIZE / 2,
+        birdY + BIRD_SIZE / 2,
+        BIRD_SIZE / 2,
+        0,
+        Math.PI * 2
+      )
+      ctx.fill()
 
       // draw pipes
       ctx.fillStyle = 'green'
