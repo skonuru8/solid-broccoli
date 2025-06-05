@@ -1,0 +1,39 @@
+.bird {
+  position: absolute;
+  width: 40px; /* Increased size slightly for a better visual */
+  height: 40px; /* Increased size slightly */
+  background-color: #ffeb3b; /* Brighter yellow */
+  border-radius: 50%;
+  border: 2px solid #c65102; /* Darker, more distinct border */
+  box-shadow: 0 0 10px rgba(255, 235, 59, 0.7), /* Inner glow */
+              0 3px 5px rgba(0,0,0,0.3); /* Outer shadow */
+  transition: top 0.05s linear, transform 0.1s ease-out; /* Faster top transition, added rotation */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Eye and beak to the right */
+}
+
+/* Simple eye for the bird */
+.bird::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #212121; /* Black eye */
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 8px; /* Position eye to the right */
+}
+
+/* Simple beak for the bird */
+.bird::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 14px solid #f57c00; /* Orange beak */
+  margin-right: -2px; /* Position beak slightly outside the circle */
+  border-radius: 2px; /* Slightly rounded beak */
+}

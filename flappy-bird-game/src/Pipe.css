@@ -1,0 +1,27 @@
+.pipe {
+  position: absolute;
+  width: 80px; /* PIPE_WIDTH from Game.js */
+  background-image: linear-gradient(to right, #5cb85c 85%, #4cae4c 100%); /* Green gradient */
+  border-left: 5px solid #3e8e41; /* Darker green left border */
+  border-right: 5px solid #3e8e41; /* Darker green right border */
+  box-sizing: border-box;
+}
+
+.pipe-cap {
+  position: absolute;
+  left: -10px; /* Slightly wider than pipe */
+  width: 100px; /* PIPE_WIDTH + 20px */
+  height: 30px;
+  background-image: linear-gradient(to right, #4cae4c, #3e8e41);
+  border: 5px solid #2e7d32;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.pipe-top > .pipe-cap { /* Cap for the top pipe is at its bottom */
+  bottom: -5px; /* Overlap slightly with pipe body */
+}
+
+.pipe-bottom > .pipe-cap { /* Cap for the bottom pipe is at its top */
+  top: -5px; /* Overlap slightly with pipe body */
+}

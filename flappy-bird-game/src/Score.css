@@ -1,0 +1,16 @@
+.score-display {
+  position: absolute;
+  top: 25px; /* Adjusted top slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em; /* Even larger font for score */
+  color: #ffffff; /* Pure white */
+  font-weight: bold;
+  z-index: 100;
+  font-family: 'Helvetica Neue', Impact, Arial, sans-serif; /* Modern, impactful font */
+  -webkit-text-stroke: 1.5px #2c3e50; /* Dark blue/grey stroke for better contrast */
+  text-stroke: 1.5px #2c3e50;
+  paint-order: stroke fill; /* Ensure stroke is behind fill */
+  text-shadow:
+    3px 3px 0px rgba(44, 62, 80, 0.7); /* More pronounced shadow, matching border color */
+}

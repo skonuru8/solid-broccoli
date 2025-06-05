@@ -1,0 +1,81 @@
+.game-area {
+  width: 800px; /* GAME_WIDTH */
+  height: 600px; /* GAME_HEIGHT */
+  border: 3px solid #2c3e50; /* Darker, slightly thicker border */
+  position: relative;
+  overflow: hidden;
+  /* Sky gradient background */
+  background: linear-gradient(to bottom, #87CEEB 0%, #E0F8FF 100%);
+  margin: 20px auto; /* Center the game area */
+  cursor: pointer; /* Indicate it's clickable */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); /* More pronounced shadow */
+}
+
+.game-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Softer shadow for messages */
+}
+
+.game-message h2 {
+  font-size: 3.5em; /* Larger title */
+  margin-bottom: 15px;
+  font-family: 'Arial Black', Gadget, sans-serif; /* Chunkier font */
+  color: #fff;
+}
+
+.game-message p {
+  font-size: 1.8em; /* Larger paragraph */
+  margin-bottom: 25px;
+  font-family: 'Arial', sans-serif;
+  color: #f0f0f0; /* Slightly off-white */
+}
+
+.game-message button,
+.game-area button { /* General button styling within game area */
+  padding: 12px 25px;
+  font-size: 1.3em; /* Larger button text */
+  color: #fff; /* White text */
+  background-color: #f39c12; /* Orange button */
+  border: none; /* Remove default border */
+  border-bottom: 4px solid #d35400; /* Darker orange bottom border for 3D effect */
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.game-message button:hover,
+.game-area button:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+  box-shadow: 0 7px 12px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
+}
+
+.game-message button:active,
+.game-area button:active {
+  background-color: #d35400; /* Even darker on active */
+  transform: translateY(2px); /* Push button down */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-bottom-width: 2px; /* Reduce border for pressed effect */
+}
+
+.game-over-message {
+  background-color: rgba(250, 250, 250, 0.9); /* Slightly more opaque */
+  padding: 40px; /* More padding */
+  border-radius: 15px; /* More rounded */
+  color: #333;
+  text-shadow: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.game-over-message h2 {
+    color: #e74c3c;
+    font-size: 3em; /* Consistent with other h2 */
+}
